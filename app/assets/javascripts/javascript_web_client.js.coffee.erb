@@ -2,5 +2,6 @@
   .config ['$routeProvider', ($routeProvider) ->
     $routeProvider
       .when('/', controller: 'HomeCtrl', templateUrl: <%= asset_path('home.html').to_json %>)
+      .when('/about', templateUrl: <%= asset_path('about.html').to_json %>)
       .otherwise(redirectTo: '/')
   ]
