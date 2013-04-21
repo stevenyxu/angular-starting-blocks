@@ -28,8 +28,10 @@ Prerequisites
 
  * Ruby 2.0
  * Bundler
- * On Ubuntu:
-   * `qmake`: `sudo apt-get install qt4-qmake`
+ * PhantomJS to run tests (more information available on the
+   [poltergeist](https://github.com/jonleighton/poltergeist/tree/v1.2.0)
+   readme)
+
 
 Usage
 -----

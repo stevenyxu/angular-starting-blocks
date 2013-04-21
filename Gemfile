@@ -21,3 +21,12 @@ end
 group :deployment do
   gem 'capistrano'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+end
