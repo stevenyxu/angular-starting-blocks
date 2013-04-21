@@ -23,6 +23,51 @@ number of advantages over developing on static files:
    pre-compresses files for production use, identifying assets with unique
    versioned paths, allowing for powerful browser caching.
 
+Usage
+-----
+
+Simply fork and use!
+
+Once you've checked out your application:
+
+    bundle install
+    bundle exec rails server
+
+### Conventions
+
+The root module for the AngularJS application governing the site is at
+`app/assets/javascripts/javascript_web_client.js.coffee.erb`. The file name in
+the asset pipeline is referred to throughout the AngularJS classes. The module
+name `angular.JavascriptWebClient` is also referred to in the application
+layout at `app/views/layouts/application.html.haml`. The application may be
+renamed but needs to be renamed in all these places.
+
+Directives are placed in `app/assets/javascripts/directives` and are splat
+required by `app/assets/javascripts/application.js`.
+
+Controllers are placed in `app/assets/javascripts/controllers` and are splat
+required by `app/assets/javascripts/application.js`.
+
+Templates are placed in `app/assets/templates` and are referred to from modules
+and directives by using the ERB function `asset_path` from the Rails asset
+pipeline. Consequently, Javascript source files that need to refer to template
+paths typically have `.erb` extensions.
+
+### Tools
+
+For [vim-rails](http://www.vim.org/scripts/script.php?script_id=1567) (version
+5.0 or newer required) users, `config/projections.json` is provided. This
+allows you to use helpers like `:Rngcontroller`, `:Rdirective`, and
+`Rtemplate`.
+
+Troubleshooting
+---------------
+
+ * **Asset paths (`asset_path`) not resolving as expected in other files in the
+   pipeline:** Restart the server and delete `public/assets` and `tmp/cache` to
+   remove Sprockets cache files, which can contain stale data about failed
+   filesystem lookups.
+
 Alternatives
 ------------
 

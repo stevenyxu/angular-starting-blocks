@@ -1,0 +1,11 @@
+{
+  "app/assets/javascripts/controllers/*": {
+    "command": "ngcontroller"
+  },
+  "app/assets/javascripts/directives/*": {
+    "command": "directive"
+  },
+  "app/assets/templates/*": {
+    "command": "template"
+  }
+}

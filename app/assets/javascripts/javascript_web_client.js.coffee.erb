@@ -1,0 +1,6 @@
+@angular.JavascriptWebClient = @angular.module('angular.JavascriptWebClient', [])
+  .config ['$routeProvider', ($routeProvider) ->
+    $routeProvider
+      .when('/', controller: 'HomeCtrl', templateUrl: <%= asset_path('home.html').to_json %>)
+      .otherwise(redirectTo: '/')
+  ]
