@@ -1,5 +1,5 @@
-Javascript Web Client
-=====================
+AngularJS Starting Blocks (on Rails)
+====================================
 
 **A template Rails application designed for building Javascript web clients.**
 
