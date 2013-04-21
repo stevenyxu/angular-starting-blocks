@@ -21,3 +21,9 @@ end
 group :deployment do
   gem 'capistrano'
 end
+
+group :test do
+  gem 'capybara'
+  gem 'capybara-webkit', git: 'git://github.com/thoughtbot/capybara-webkit.git'
+  gem 'rspec'
+end
