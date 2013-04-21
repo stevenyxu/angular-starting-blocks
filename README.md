@@ -43,6 +43,12 @@ Once you've checked out your application:
     bundle install
     bundle exec rails server
 
+### Testing
+
+This application comes with specs ready to run out of the box in `spec/features`.
+
+    bundle exec rake spec
+
 ### Conventions
 
 The root module for the AngularJS application governing the site is at
@@ -69,6 +75,18 @@ For [vim-rails](http://www.vim.org/scripts/script.php?script_id=1567) (version
 5.0 or newer required) users, `config/projections.json` is provided. This
 allows you to use helpers like `:Rngcontroller`, `:Rdirective`, and
 `Rtemplate`.
+
+### Deployment
+
+Use Rails' precompile task:
+
+    RAILS_ENV=assets bundle exec rake assets:precompile
+
+You will still require the Rack server to serve the application as a whole, but
+anything out of `public/assets` can be served statically or out of a CDN (by
+setting `config.action_controller.asset_host`; see the [asset pipeline
+readme](http://guides.rubyonrails.org/asset_pipeline.html) for more details)
+with filename-based browser caching.
 
 Troubleshooting
 ---------------
