@@ -23,6 +23,14 @@ number of advantages over developing on static files:
    pre-compresses files for production use, identifying assets with unique
    versioned paths, allowing for powerful browser caching.
 
+Prerequisites
+-------------
+
+ * Ruby 2.0
+ * Bundler
+ * On Ubuntu:
+   * `qmake`: `sudo apt-get install qt4-qmake`
+
 Usage
 -----
 
