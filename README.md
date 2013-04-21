@@ -119,3 +119,6 @@ Alternatives
 
  * [angular-seed](https://github.com/angular/angular-seed), a static
    development environment for angular-js.
+ * [angular-socket-io-seed](https://github.com/btford/angular-socket-io-seed),
+   a static environment served through node preconfigured with Socket.IO
+   support.
