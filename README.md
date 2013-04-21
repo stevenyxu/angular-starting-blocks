@@ -8,8 +8,26 @@ and deploy standalone HTML/Javascript web clients. It is primarily designed for
 the AngularJS framework but should be extensible to other ones. It also brings
 in Zurb Foundation and its icon sets by default.
 
-Why Rails?
-----------
+Rationale
+---------
+
+As I was working on increasingly sophisticated HTML applications, I found
+myself having to solve the same development and deployment problems over and
+over again. These starting blocks are an attempt to provide the following
+HTML/JS application development workflow features from the get-go:
+
+ * Debuggable asset management
+ * Preprocessor (HAML, CoffeeScript, ERB, SASS) support
+ * Versioned third-party asset support
+ * Testing ready to go
+ * Development environment setup
+ * Asset precompilation for deployments
+
+The result is a Rails application with unneeded components (ActiveRecord ORM,
+backend tests) stripped out and useful features for frontend development (IDE
+macros, sample tests, JS directories, baseline CSS/JS frameworks) added in.
+
+### Why Rails?
 
 Rails provides a nice out-of-the-box setup to develop on and deploy Javascript
 and CSS assets using the [asset
