@@ -1,4 +1,4 @@
-@angular.JavascriptWebClient = @angular.module('angular.JavascriptWebClient', [])
+@angular.JavascriptWebClient = @angular.module('angular.JavascriptWebClient', ['ngRoute'])
   .config ['$routeProvider', ($routeProvider) ->
     $routeProvider
       .when('/', controller: 'HomeCtrl', templateUrl: <%= asset_path('home.html').to_json %>)
